@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>徐嘉辉 - 机械工程师个人网站</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fas fa-cogs"></i> 徐嘉辉的个人网站
+        </div>
+        <nav class="nav-links">
+            <a href="#home" class="nav-link active">首页</a>
+            <a href="#about" class="nav-link">关于我</a>
+            <a href="#skills" class="nav-link">技能矩阵</a>
+            <a href="#projects" class="nav-link">项目案例</a>
+            <a href="#experience" class="nav-link">实践经历</a>
+            <a href="#contact" class="nav-link">联系方式</a>
+        </nav>
+        <div class="resume-btn">
+            <button class="btn download-btn">
+                <i class="fas fa-download"></i> 下载简历
+                <div class="resume-dropdown">
+                    <a href="#">PDF版本</a>
+                    <a href="#">Word版本</a>
+                </div>
+            </button>
+        </div>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- 移动端菜单 -->
+    <div class="mobile-menu">
+        <a href="#home" class="mobile-link">首页</a>
+        <a href="#about" class="mobile-link">关于我</a>
+        <a href="#skills" class="mobile-link">技能矩阵</a>
+        <a href="#projects" class="mobile-link">项目案例</a>
+        <a href="#experience" class="mobile-link">实践经历</a>
+        <a href="#contact" class="mobile-link">联系方式</a>
+        <button class="btn mobile-download">
+            <i class="fas fa-download"></i> 下载简历
+        </button>
+    </div>
+
+    <!-- 首页Hero区 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>徐嘉辉 <span>| 智能制造工程专业</span></h1>
+            <p>专注机械结构设计、工业机器人应用 | 2项国家级奖项获得者</p>
+            <div class="tags">
+                <span class="tag">机械设计</span>
+                <span class="tag">机器人运维</span>
+                <span class="tag">轻量化优化</span>
+                <span class="tag">科创项目管理</span>
+            </div>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary-btn">查看项目案例</a>
+                <a href="#contact" class="btn secondary-btn">联系我</a>
+            </div>
+        </div>
+        <div class="mechanical-bg"></div>
+    </section>
+
+    <!-- 关于我板块 -->
+    <section id="about" class="about">
+        <h2 class="section-title">关于我</h2>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/profile.jpg" alt="徐嘉辉个人照片" class="profile-img">
+            </div>
+            <div class="about-info">
+                <div class="info-card">
+                    <h3><i class="fas fa-user"></i> 基础信息</h3>
+                    <p><strong>姓名：</strong>徐嘉辉</p>
+                    <p><strong>意向岗位：</strong>机械工程师</p>
+                    <p><strong>意向城市：</strong>全国</p>
+                    <p><strong>联系方式：</strong>138xxxx5678 | xujiahui@email.com</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-graduation-cap"></i> 教育背景</h3>
+                    <p><strong>学校：</strong>华侨大学</p>
+                    <p><strong>专业：</strong>智能制造工程</p>
+                    <p><strong>GPA：</strong>3.95/4.0（专业前10%）</p>
+                    <p><strong>核心课程：</strong>机械设计、控制工程、工业机器人技术、CAD/CAE应用</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-award"></i> 荣誉资质</h3>
+                    <p>国家励志奖学金（2023）</p>
+                    <p>中国大学生方程式汽车大赛 全国二等奖</p>
+                    <p>中国大学生工程实践与创新能力大赛 全国二等奖</p>
+                    <p>工业机器人系统运维员（三级）证书</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-lightbulb"></i> 自我评价</h3>
+                    <p>扎实的机械设计能力+工业机器人实操经验+6个科创项目统筹经历，具备从方案设计到落地实施的全流程工程思维，擅长跨团队协作与问题解决。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能矩阵板块 -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">技能矩阵</h2>
+        <div class="skills-container">
+            <!-- 机械设计技能 -->
+            <div class="skill-card">
+                <div class="skill-header">
+                    <i class="fas fa-cad"></i>
+                    <h3>机械设计技能</h3>
+                </div>
+                <div class="skill-content">
+                    <div class="skill-item">
+                        <div class="skill-name">AutoCAD</div>
+                        <div class="gauge-container">
+                            <div class="gauge" data-value="90">
+                                <div class="gauge-pointer"></div>
+                                <div class="gauge-value">90%</div>
+                            </div>
+                        </div>
+                        <div class="skill-desc">二维工程图绘制，标准化出图</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">UG</div>
+                        <div class="gauge-container">
+                            <div class="gauge" data-value="85">
+                                <div class="gauge-pointer"></div>
+                                <div class="gauge-value">85%</div>
+                            </div>
+                        </div>
+                        <div class="skill-desc">赛车电控系统结构设计</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Creo</div>
+                        <div class="gauge-container">
+                            <div class="gauge" data-value="80">
+                                <div class="gauge-pointer"></div>
+                                <div class="gauge-value">80%</div>
+                            </div>
+                        </div>
+                        <div class="skill-desc">三维建模与装配设计</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Altair Inspire</div>
+                        <div class="gauge-container">
+                            <div class="gauge" data-value="75">
+                                <div class="gauge-pointer"></div>
+                                <div class="gauge-value">75%</div>
+                            </div>
+                        </div>
+                        <div class="skill-desc">轻量化模型拓扑优化</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 机器人与控制技能 -->
+            <div class="skill-card">
+                <div class="skill-header">
+                    <i class="fas fa-robot"></i>
+                    <h3>机器人与控制技能</h3>
+                </div>
+                <div class="skill-content">
+                    <div class="skill-item">
+                        <div class="skill-name">ABB/KUKA机器人运维</div>
+                        <div class="robot-gauge">
+                            <div class="robot-joint" data-value="88"></div>
+                            <div class="robot-value">88%</div>
+                        </div>
+                        <div class="skill-desc">机器人日常维护与故障排除</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">RobotStudio</div>
+                        <div class="robot-gauge">
+                            <div class="robot-joint" data-value="82"></div>
+                            <div class="robot-value">82%</div>
+                        </div>
+                        <div class="skill-desc">机器人工作站仿真与编程</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">PLC基础</div>
+                        <div class="robot-gauge">
+                            <div class="robot-joint" data-value="65"></div>
+                            <div class="robot-value">65%</div>
+                        </div>
+                        <div class="skill-desc">简单逻辑控制与程序编写</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">证书</div>
+                        <div class="certificate">
+                            <span>工业机器人系统运维员（三级）</span>
+                            <button class="view-cert-btn">查看证书</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 项目与工程能力 -->
+            <div class="skill-card">
+                <div class="skill-header">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>项目与工程能力</h3>
+                </div>
+                <div class="skill-content">
+                    <div class="skill-network">
+                        <div class="network-node node1">
+                            <div class="node-name">项目管理</div>
+                            <div class="node-desc">6个科创项目统筹经验</div>
+                        </div>
+                        <div class="network-node node2">
+                            <div class="node-name">结构优化</div>
+                            <div class="node-desc">轻量化设计与仿真</div>
+                        </div>
+                        <div class="network-node node3">
+                            <div class="node-name">故障排查</div>
+                            <div class="node-desc">机械系统问题诊断</div>
+                        </div>
+                        <div class="network-node node4">
+                            <div class="node-name">团队统筹</div>
+                            <div class="node-desc">带领10+人团队完成项目</div>
+                        </div>
+                        <div class="network-connections"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目案例板块 -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">项目案例</h2>
+        <div class="projects-container">
+            <!-- 项目1 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="images/formula-car.jpg" alt="中国大学生方程式汽车大赛">
+                    <div class="project-badge">全国二等奖</div>
+                </div>
+                <div class="project-info">
+                    <h3>中国大学生方程式汽车大赛</h3>
+                    <div class="project-tech">
+                        <span>UG</span>
+                        <span>EPLAN</span>
+                        <span>Arduino</span>
+                    </div>
+                    <p class="project-desc">负责电控系统设计、EPLAN线束建模、半自动离合换挡开发，实现拨片换挡功能，队内考核第一。</p>
+                    <button class="view-project-btn">查看详情</button>
+                </div>
+                <div class="project-detail">
+                    <div class="detail-content">
+                        <h4>项目流程</h4>
+                        <div class="project-flow">
+                            <div class="flow-step">
+                                <div class="step-number">1</div>
+                                <div class="step-name">需求分析</div>
+                                <div class="step-desc">确定换挡响应时间＜0.5s</div>
+                            </div>
+                            <div class="flow-step">
+                                <div class="step-number">2</div>
+                                <div class="step-name">结构设计</div>
+                                <div class="step-desc">UG建模3D结构</div>
+                            </div>
+                            <div class="flow-step">
+                                <div class="step-number">3</div>
+                                <div class="step-name">仿真验证</div>
+                                <div class="step-desc">完成1000次换挡测试</div>
+                            </div>
+                            <div class="flow-step">
+                                <div class="step-number">4</div>
+                                <div class="step-name">落地实施</div>
+                                <div class="step-desc">实车安装调试</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="close-detail">×</button>
+                </div>
+            </div>
+
+            <!-- 项目2 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="images/fish-cleaner.jpg" alt="全自动鱼洗机">
+                    <div class="project-badge">创新大赛获奖</div>
+                </div>
+                <div class="project-info">
+                    <h3>全自动鱼洗机</h3>
+                    <div class="project-tech">
+                        <span>视觉识别</span>
+                        <span>机械结构</span>
+                        <span>参数匹配</span>
+                    </div>
+                    <p class="project-desc">设计视觉识别自适应系统，实现不同尺寸鱼类的自动清洗，完成定制化加工参数匹配算法开发。</p>
+                    <button class="view-project-btn">查看详情</button>
+                </div>
+                <div class="project-detail">
+                    <div class="detail-content">
+                        <h4>参数调节演示</h4>
+                        <div class="parameter-demo">
+                            <label for="fish-size">鱼类尺寸调节:</label>
+                            <input type="range" id="fish-size" min="10" max="50" value="30">
+                            <div class="machine-simulation">
+                                <div class="machine-part"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="close-detail">×</button>
+                </div>
+            </div>
+
+            <!-- 项目3 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="images/lightweight.jpg" alt="轻量化赛道成图大赛">
+                    <div class="project-badge">技术创新奖</div>
+                </div>
+                <div class="project-info">
+                    <h3>轻量化赛道成图大赛</h3>
+                    <div class="project-tech">
+                        <span>Altair Inspire</span>
+                        <span>AI Studio</span>
+                        <span>拓扑优化</span>
+                    </div>
+                    <p class="project-desc">使用拓扑优化技术实现零件轻量化设计，在保证强度达标的前提下实现减重30%，提升整体性能。</p>
+                    <button class="view-project-btn">查看详情</button>
+                </div>
+                <div class="project-detail">
+                    <div class="detail-content">
+                        <h4>优化数据对比</h4>
+                        <div class="optimization-chart">
+                            <div class="chart-bar before">
+                                <div class="bar-value">100%</div>
+                                <div class="bar-label">原始重量</div>
+                            </div>
+                            <div class="chart-bar after">
+                                <div class="bar-value">70%</div>
+                                <div class="bar-label">优化后重量</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="close-detail">×</button>
+                </div>
+            </div>
+
+            <!-- 项目4 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="images/rescue-robot.jpg" alt="中国大学生工程实践与创新能力大赛">
+                    <div class="project-badge">全国二等奖</div>
+                </div>
+                <div class="project-info">
+                    <h3>中国大学生工程实践与创新能力大赛</h3>
+                    <div class="project-tech">
+                        <span>麦轮传动</span>
+                        <span>YOLOv5</span>
+                        <span>团队管理</span>
+                    </div>
+                    <p class="project-desc">担任队长，统筹软硬件方案，设计自制四驱麦轮底盘，实现全局坐标定位，获赛区最高得分。</p>
+                    <button class="view-project-btn">查看详情</button>
+                </div>
+                <div class="project-detail">
+                    <div class="detail-content">
+                        <h4>系统架构</h4>
+                        <div class="system-architecture">
+                            <div class="architecture-part">机械底盘（麦轮传动）</div>
+                            <div class="architecture-part">视觉系统（YOLOv5）</div>
+                            <div class="architecture-part">控制系统（STM32）</div>
+                            <div class="architecture-part">电源管理</div>
+                        </div>
+                    </div>
+                    <button class="close-detail">×</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 实践经历板块 -->
+    <section id="experience" class="experience">
+        <h2 class="section-title">实践经历</h2>
+        <div class="timeline">
+            <div class="timeline-line"></div>
+            
+            <!-- 实习经历 -->
+            <div class="timeline-item">
+                <div class="timeline-dot">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>福建先进制造技术研究院 | 工业机器人实习生</h3>
+                    <div class="timeline-date">2023.07 - 2023.09</div>
+                    <ul class="timeline-details">
+                        <li>使用RobotStudio进行工作站搭建与路径规划，完成3套自动化生产线仿真方案</li>
+                        <li>参与ABB/KUKA机器人实操，包括取放、码垛等基础操作与故障排查</li>
+                        <li>协助编写机器人操作规程与维护手册，优化设备利用率提升15%</li>
+                    </ul>
+                    <button class="view-code-btn">查看程序片段</button>
+                </div>
+            </div>
+            
+            <!-- 校园经历1 -->
+            <div class="timeline-item">
+                <div class="timeline-dot">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>班级班长 | 华侨大学</h3>
+                    <div class="timeline-date">2022.09 - 至今</div>
+                    <ul class="timeline-details">
+                        <li>负责班级日常管理与评奖评优工作，组织10+次班级团建活动</li>
+                        <li>协调师生沟通，解决课程与实践环节问题，班级满意度95%</li>
+                        <li>带领班级获校级"优秀班集体"称号，组织5支团队参加科创比赛</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 校园经历2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>科创团队负责人 | 华侨大学机器人实验室</h3>
+                    <div class="timeline-date">2021.10 - 至今</div>
+                    <ul class="timeline-details">
+                        <li>组建12人科创团队，负责项目选题、分工与进度管理</li>
+                        <li>带领团队获国家级奖项2项，省级奖项3项，申请发明专利1项</li>
+                        <li>组织技术分享会15场，培养5名核心成员成为项目骨干</li>
+                    </ul>
+                    <div class="achievement-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">国家级奖项人次</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">团队成员</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式板块 -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">联系方式</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>联系信息</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>138xxxx5678</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>xujiahui@email.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>福建省厦门市</span>
+                </div>
+                <div class="wechat-qrcode">
+                    <img src="images/wechat.jpg" alt="微信二维码">
+                    <p>扫码添加微信</p>
+                </div>
+                <p class="contact-note">可提供项目细节补充说明，欢迎随时联系</p>
+            </div>
+            <div class="contact-form">
+                <h3>求职咨询</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">单位</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">咨询主题</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">请选择</option>
+                            <option value="job">岗位沟通</option>
+                            <option value="project">项目细节</option>
+                            <option value="cooperation">合作咨询</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">留言内容</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="verify">验证码</label>
+                        <input type="text" id="verify" name="verify" required>
+                        <div class="verify-code">8A3Z</div>
+                    </div>
+                    <button type="submit" class="btn submit-btn">发送消息</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 徐嘉辉 - 机械工程师求职专用</p>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-github"></i> 代码仓库</a>
+                <a href="#"><i class="fas fa-file-code"></i> 网站设计说明</a>
+            </div>
+            <p class="footer-tech">基于HTML/CSS/JavaScript开发</p>
+        </div>
+    </footer>
+
+    <!-- 证书查看弹窗 -->
+    <div class="modal certificate-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="images/certificate.jpg" alt="工业机器人系统运维员证书">
+        </div>
+    </div>
+
+    <!-- 代码片段弹窗 -->
+    <div class="modal code-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>机器人码垛程序片段</h3>
+            <pre class="code-block">
+MODULE MainModule
+    PROC Main()
+        ! 初始化
+        Reset doGripper;
+        MoveJ Home, v1000, z50, tool0\WObj:=wobj0;
+        
+        ! 取料点
+        MoveJ pPickPos, v800, z30, tool0\WObj:=wobj0;
+        MoveL pPickPosFine, v500, z0, tool0\WObj:=wobj0;
+        Set doGripper;
+        WaitTime 0.5;
+        
+        ! 放料点
+        MoveL pPickPos, v500, z30, tool0\WObj:=wobj0;
+        MoveJ pPlacePos, v800, z30, tool0\WObj:=wobj0;
+        MoveL pPlacePosFine, v500, z0, tool0\WObj:=wobj0;
+        Reset doGripper;
+        WaitTime 0.5;
+        
+        ! 返回 home 位置
+        MoveL pPlacePos, v500, z30, tool0\WObj:=wobj0;
+        MoveJ Home, v1000, z50, tool0\WObj:=wobj0;
+    ENDPROC
+ENDMODULE</pre>
+        </div>
+    </div>
+
+    <!-- 提交成功弹窗 -->
+    <div class="modal success-modal">
+        <div class="modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>消息发送成功</h3>
+            <p>将在24小时内回复您的咨询，感谢您的关注！</p>
+            <button class="btn close-success">确定</button>
+        </div>
+    </div>
+
+    <script>
+        // 简单交互脚本（可根据需要扩展）
+        document.addEventListener('DOMContentLoaded', function() {
+            // 导航栏滚动效果
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            });
+
+            // 移动端菜单切换
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('mobile-menu-active');
+            });
+
+            // 项目详情查看
+            const viewProjectBtns = document.querySelectorAll('.view-project-btn');
+            const projectDetails = document.querySelectorAll('.project-detail');
+            const closeDetailBtns = document.querySelectorAll('.close-detail');
+            
+            viewProjectBtns.forEach((btn, index) => {
+                btn.addEventListener('click', function() {
+                    projectDetails[index].style.display = 'block';
+                });
+            });
+            
+            closeDetailBtns.forEach((btn, index) => {
+                btn.addEventListener('click', function() {
+                    projectDetails[index].style.display = 'none';
+                });
+            });
+
+            // 证书查看弹窗
+            const viewCertBtn = document.querySelector('.view-cert-btn');
+            const certModal = document.querySelector('.certificate-modal');
+            const closeCertModal = document.querySelector('.certificate-modal .close-modal');
+            
+            viewCertBtn.addEventListener('click', function() {
+                certModal.style.display = 'block';
+            });
+            
+            closeCertModal.addEventListener('click', function() {
+                certModal.style.display = 'none';
+            });
+
+            // 代码片段查看
+            const viewCodeBtn = document.querySelector('.view-code-btn');
+            const codeModal = document.querySelector('.code-modal');
+            const closeCodeModal = document.querySelector('.code-modal .close-modal');
+            
+            viewCodeBtn.addEventListener('click', function() {
+                codeModal.style.display = 'block';
+            });
+            
+            closeCodeModal.addEventListener('click', function() {
+                codeModal.style.display = 'none';
+            });
+
+            // 关闭所有弹窗
+            window.addEventListener('click', function(event) {
+                if (event.target.classList.contains('modal')) {
+                    event.target.style.display = 'none';
+                }
+            });
+
+            // 表单提交
+            const contactForm = document.getElementById('contactForm');
+            const successModal = document.querySelector('.success-modal');
+            const closeSuccessBtn = document.querySelector('.close-success');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                successModal.style.display = 'block';
+                contactForm.reset();
+            });
+            
+            closeSuccessBtn.addEventListener('click', function() {
+                successModal.style.display = 'none';
+            });
+
+            // 技能仪表盘动画
+            const gauges = document.querySelectorAll('.gauge');
+            gauges.forEach(gauge => {
+                const value = gauge.getAttribute('data-value');
+                const pointer = gauge.querySelector('.gauge-pointer');
+                // 计算角度 (0-100% 对应 -135deg 到 135deg)
+                const angle = (value / 100) * 270 - 135;
+                pointer.style.transform = `rotate(${angle}deg)`;
+            });
+
+            // 机器人关节动画
+            const robotJoints = document.querySelectorAll('.robot-joint');
+            robotJoints.forEach(joint => {
+                const value = joint.getAttribute('data-value');
+                joint.style.width = `${value}%`;
+            });
+
+            // 鱼类尺寸调节演示
+            const fishSizeSlider = document.getElementById('fish-size');
+            const machinePart = document.querySelector('.machine-part');
+            
+            if (fishSizeSlider && machinePart) {
+                fishSizeSlider.addEventListener('input', function() {
+                    const size = this.value;
+                    machinePart.style.width = `${size}px`;
+                    machinePart.style.height = `${size * 0.6}px`;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
