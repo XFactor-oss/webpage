@@ -65,6 +65,10 @@
             </div>
         </div>
         <div class="mechanical-bg"></div>
+        <!-- 机械粒子装饰 -->
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
     </section>
 
     <!-- 关于我板块 -->
@@ -515,7 +519,7 @@
         </div>
     </footer>
 
-    <!-- 证书查看弹窗 -->
+    <!-- 弹窗 -->
     <div class="modal certificate-modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -523,7 +527,6 @@
         </div>
     </div>
 
-    <!-- 代码片段弹窗 -->
     <div class="modal code-modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -556,7 +559,6 @@ ENDMODULE</pre>
         </div>
     </div>
 
-    <!-- 提交成功弹窗 -->
     <div class="modal success-modal">
         <div class="modal-content">
             <div class="success-icon">
@@ -569,8 +571,8 @@ ENDMODULE</pre>
     </div>
 
     <script>
-        // 简单交互脚本（可根据需要扩展）
-        document.addEventListener('DOMContentLoaded', function() {
+        // 等待页面完全加载后执行
+        window.addEventListener('load', function() {
             // 导航栏滚动效果
             const navbar = document.querySelector('.navbar');
             window.addEventListener('scroll', function() {
@@ -587,6 +589,12 @@ ENDMODULE</pre>
             
             mobileMenuBtn.addEventListener('click', function() {
                 mobileMenu.classList.toggle('mobile-menu-active');
+                // 添加菜单动画
+                if (mobileMenu.classList.contains('mobile-menu-active')) {
+                    mobileMenu.style.animation = 'slideIn 0.3s ease forwards';
+                } else {
+                    mobileMenu.style.animation = 'slideOut 0.3s ease forwards';
+                }
             });
 
             // 项目详情查看
@@ -597,12 +605,16 @@ ENDMODULE</pre>
             viewProjectBtns.forEach((btn, index) => {
                 btn.addEventListener('click', function() {
                     projectDetails[index].style.display = 'block';
+                    projectDetails[index].style.animation = 'fadeIn 0.3s ease forwards';
                 });
             });
             
             closeDetailBtns.forEach((btn, index) => {
                 btn.addEventListener('click', function() {
-                    projectDetails[index].style.display = 'none';
+                    projectDetails[index].style.animation = 'fadeOut 0.3s ease forwards';
+                    setTimeout(() => {
+                        projectDetails[index].style.display = 'none';
+                    }, 300);
                 });
             });
 
@@ -612,11 +624,12 @@ ENDMODULE</pre>
             const closeCertModal = document.querySelector('.certificate-modal .close-modal');
             
             viewCertBtn.addEventListener('click', function() {
-                certModal.style.display = 'block';
+                certModal.style.display = 'flex';
+                certModal.querySelector('.modal-content').style.animation = 'scaleIn 0.3s ease forwards';
             });
             
             closeCertModal.addEventListener('click', function() {
-                certModal.style.display = 'none';
+                closeModal(certModal);
             });
 
             // 代码片段查看
@@ -625,17 +638,26 @@ ENDMODULE</pre>
             const closeCodeModal = document.querySelector('.code-modal .close-modal');
             
             viewCodeBtn.addEventListener('click', function() {
-                codeModal.style.display = 'block';
+                codeModal.style.display = 'flex';
+                codeModal.querySelector('.modal-content').style.animation = 'scaleIn 0.3s ease forwards';
             });
             
             closeCodeModal.addEventListener('click', function() {
-                codeModal.style.display = 'none';
+                closeModal(codeModal);
             });
 
-            // 关闭所有弹窗
+            // 关闭弹窗通用函数
+            function closeModal(modal) {
+                modal.querySelector('.modal-content').style.animation = 'scaleOut 0.3s ease forwards';
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300);
+            }
+
+            // 点击弹窗外部关闭
             window.addEventListener('click', function(event) {
                 if (event.target.classList.contains('modal')) {
-                    event.target.style.display = 'none';
+                    closeModal(event.target);
                 }
             });
 
@@ -646,30 +668,39 @@ ENDMODULE</pre>
             
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                successModal.style.display = 'block';
+                successModal.style.display = 'flex';
+                successModal.querySelector('.modal-content').style.animation = 'scaleIn 0.3s ease forwards';
                 contactForm.reset();
             });
             
             closeSuccessBtn.addEventListener('click', function() {
-                successModal.style.display = 'none';
+                closeModal(successModal);
             });
 
-            // 技能仪表盘动画
-            const gauges = document.querySelectorAll('.gauge');
-            gauges.forEach(gauge => {
-                const value = gauge.getAttribute('data-value');
-                const pointer = gauge.querySelector('.gauge-pointer');
-                // 计算角度 (0-100% 对应 -135deg 到 135deg)
-                const angle = (value / 100) * 270 - 135;
-                pointer.style.transform = `rotate(${angle}deg)`;
-            });
+            // 技能仪表盘动画（延迟触发，确保元素加载）
+            setTimeout(() => {
+                const gauges = document.querySelectorAll('.gauge');
+                gauges.forEach(gauge => {
+                    const value = gauge.getAttribute('data-value');
+                    const pointer = gauge.querySelector('.gauge-pointer');
+                    // 计算角度 (0-100% 对应 -135deg 到 135deg)
+                    const angle = (value / 100) * 270 - 135;
+                    // 添加动画过渡
+                    pointer.style.transition = 'transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1)';
+                    pointer.style.transform = `rotate(${angle}deg)`;
+                });
+            }, 500);
 
-            // 机器人关节动画
-            const robotJoints = document.querySelectorAll('.robot-joint');
-            robotJoints.forEach(joint => {
-                const value = joint.getAttribute('data-value');
-                joint.style.width = `${value}%`;
-            });
+            // 机器人关节动画（延迟触发）
+            setTimeout(() => {
+                const robotJoints = document.querySelectorAll('.robot-joint');
+                robotJoints.forEach(joint => {
+                    const value = joint.getAttribute('data-value');
+                    // 添加动画过渡
+                    joint.style.transition = 'width 1.5s cubic-bezier(0.2, 0.8, 0.2, 1)';
+                    joint.style.width = `${value}%`;
+                });
+            }, 800);
 
             // 鱼类尺寸调节演示
             const fishSizeSlider = document.getElementById('fish-size');
@@ -682,6 +713,25 @@ ENDMODULE</pre>
                     machinePart.style.height = `${size * 0.6}px`;
                 });
             }
+
+            // 滚动触发元素动画
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.info-card, .skill-card, .project-card, .timeline-item');
+                
+                elements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('animate-in');
+                    }
+                });
+            };
+
+            // 初始检查一次
+            animateOnScroll();
+            // 滚动时检查
+            window.addEventListener('scroll', animateOnScroll);
         });
     </script>
 </body>
